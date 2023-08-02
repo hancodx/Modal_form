@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Modal Form</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div>
+		<a href="#" onclick="modalHandler(true, 'add-country-modal')">
+			<i class='bx bx-location-plus'></i>
+			<span class="text">Ajouter un pays</span>
+		</a>
+	</div>
+
+
+	<!-- Modal -->
+	<div id="add-country-modal" class="modal" style="display: none;">
+		<div class="modal-content">
+		    <span class="modal-close" onclick="closeModal('add-country-modal')">&times;</span>
+		    <h1 class="modal-title">Ajouter un pays</h1>
+		    <form action="#" method="POST">
+			   <!-- CSRF token -->
+			   <input type="hidden" name="_token" value="{{ csrf_token() }}">
+	 
+			   <!-- Add your form fields here for adding a country -->
+			   <div class="form-group">
+				  <label class="modal-label" for="country_name">Name</label>
+				  <input class="modal-input" type="text" id="country_name" name="country_name" required>
+			   </div>
+			   <div class="form-group">
+				<label class="modal-label" for="country_name">Email</label>
+				<input class="modal-input" type="text" id="country_name" name="country_name" required>
+			 </div>
+	 
+			   <div class="form-actions">
+				  <button type="button" class="cancel-btn" onclick="closeModal('add-country-modal')">Annuler</button>
+				  <button type="submit" class="submit-btn">Ajouter</button>
+			   </div>
+		    </form>
+		</div>
+	</div>
+
+
+	<script>
+		function modalHandler(open, modalId) {
+		    const modal = document.getElementById(modalId);
+		    if (open) {
+			   modal.style.display = 'flex';
+		    } else {
+			   modal.style.display = 'none';
+		    }
+		}
+  
+		function closeModal(modalId) {
+		    const modal = document.getElementById(modalId);
+		    modal.style.display = 'none';
+		}
+	 </script>
+	 
+
+
+
+ 
+</body>
+</html>

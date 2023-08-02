@@ -1,0 +1,81 @@
+
+.action-buttons {
+ display: flex;
+}
+
+.action-btn {
+ padding: 5px;
+ margin-right: 5px;
+ border: none;
+ background-color: transparent;
+ cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.modal-content {
+ background-color: #fff;
+ padding: 35px;
+ border-radius: 30px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+ font-size: 20px;
+ font-weight: bold;
+ margin-bottom: 15px;
+}
+
+.form-group {
+ margin-bottom: 20px;
+}
+
+/* Style for the label with the class 'modal-label' */
+.form-group .modal-label {
+ display: block;
+ font-weight: bold;
+ margin-bottom: 5px;
+}
+
+
+.form-group .modal-input,
+.form-group .modal-select {
+ width: 100%;
+ padding: 8px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+}
+
+.form-actions {
+ display: flex;
+ justify-content: flex-end;
+}
+
+.cancel-btn,
+.submit-btn {
+ padding: 8px 15px;
+ margin-left: 10px;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+}
+
+.cancel-btn {
+ background-color: #ccc;
+}
+
+.submit-btn {
+ background-color: #4caf50;
+ color: #fff;
+}
